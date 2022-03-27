@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap");
+
 html {
   box-sizing: border-box;
 }
@@ -11,5 +13,43 @@ html {
 }
 
 body {
+  font-family: "Ubuntu", sans-serif;
   min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: gray;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.calc__input-display {
+  padding: 1rem;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.calc__input-display:focus {
+  outline: none;
+}
+
+.calc__buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 0.1rem;
+}
+
+.calc-btn {
+  font-size: 1.2rem;
+  padding: 2rem;
+}
+
+.equal {
+  grid-column-start: span 2;
 }
