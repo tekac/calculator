@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap");
-
 html {
   box-sizing: border-box;
 }
@@ -13,7 +11,6 @@ html {
 }
 
 body {
-  font-family: "Ubuntu", sans-serif;
   min-height: 100vh;
 
   display: flex;
@@ -25,9 +22,12 @@ body {
   background-color: gray;
   padding: 1rem;
   border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .calc__input-display {
+  text-align: right;
   font-size: 1.5rem;
   padding: 1rem;
   width: 100%;
@@ -51,6 +51,10 @@ body {
   background-color: white;
   font-size: 1.2rem;
   padding: 2rem;
+}
+
+.period {
+  font-size: 0.5rem;
 }
 
 .equal {
