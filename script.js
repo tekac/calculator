@@ -1,4 +1,5 @@
 const buttons = document.querySelectorAll(".calc-btn");
+const display = document.getElementById("display");
 
 const add = (n1, n2) => n1 + n2;
 const subtract = (n1, n2) => n1 - n2;
@@ -26,10 +27,27 @@ const operate = (operand, n1, n2) => {
 };
 
 const handleClick = (e) => {
-  const display = document.getElementById("display");
   let buttonValue = e.currentTarget.id;
-  return (display.value += buttonValue);
+  buttonValue === "C" ? (display.value = "") : (display.value += buttonValue);
 };
+
+document.addEventListener("keydown", (e) => {
+  const allowedKeys = [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    ".",
+    "-",
+  ];
+  allowedKeys.includes(e.key) ? (display.value += e.key) : e.preventDefault();
+});
 
 buttons.forEach((btn) => {
   btn.addEventListener("click", handleClick);
