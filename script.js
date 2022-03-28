@@ -26,9 +26,14 @@ const operate = (operand, n1, n2) => {
   return value;
 };
 
+// TODO: Incorporate auto-matic comma's in number formatting on display.value
+// toLocaleString() is not a string method .. this is currently typOf String
+
 const handleClick = (e) => {
   let buttonValue = e.currentTarget.id;
   buttonValue === "C" ? (display.value = "") : (display.value += buttonValue);
+
+  if (e.)
 };
 
 document.addEventListener("keydown", (e) => {
