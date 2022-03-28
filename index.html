@@ -15,31 +15,46 @@
   <body>
     <div class="container">
       <div class="calc__input">
-        <input type="text" class="calc__input-display" placerholder="0" />
+        <input
+          type="text"
+          class="calc__input-display"
+          id="display"
+          placerholder="0"
+        />
         <div class="calc__buttons">
           <button class="calc-btn"><i class="fa-solid fa-c"></i></button>
           <button class="calc-btn">
             <i class="fa-solid fa-plus-minus"></i>
           </button>
-          <button class="calc-btn"><i class="fa-solid fa-percent"></i></button>
-          <button class="calc-btn"><i class="fa-solid fa-divide"></i></button>
-          <button class="calc-btn"><i class="fa-solid fa-7"></i></button>
-          <button class="calc-btn"><i class="fa-solid fa-8"></i></button>
-          <button class="calc-btn"><i class="fa-solid fa-9"></i></button>
-          <button class="calc-btn"><i class="fa-solid fa-xmark"></i></button>
-          <button class="calc-btn"><i class="fa-solid fa-4"></i></button>
-          <button class="calc-btn"><i class="fa-solid fa-5"></i></button>
-          <button class="calc-btn"><i class="fa-solid fa-6"></i></button>
-          <button class="calc-btn"><i class="fa-solid fa-minus"></i></button>
-          <button class="calc-btn"><i class="fa-solid fa-1"></i></button>
-          <button class="calc-btn"><i class="fa-solid fa-2"></i></button>
-          <button class="calc-btn"><i class="fa-solid fa-3"></i></button>
-          <button class="calc-btn"><i class="fa-solid fa-plus"></i></button>
-          <button class="calc-btn"><i class="fa-solid fa-0"></i></button>
-          <button class="calc-btn | period">
+          <button class="calc-btn" id="percent">
+            <i class="fa-solid fa-percent"></i>
+          </button>
+          <button class="calc-btn" id="divide">
+            <i class="fa-solid fa-divide"></i>
+          </button>
+          <button class="calc-btn" id="7"><i class="fa-solid fa-7"></i></button>
+          <button class="calc-btn" id="8"><i class="fa-solid fa-8"></i></button>
+          <button class="calc-btn" id="9"><i class="fa-solid fa-9"></i></button>
+          <button class="calc-btn" id="multiply">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button class="calc-btn" id="4"><i class="fa-solid fa-4"></i></button>
+          <button class="calc-btn" id="5"><i class="fa-solid fa-5"></i></button>
+          <button class="calc-btn" id="6"><i class="fa-solid fa-6"></i></button>
+          <button class="calc-btn" id="subtract">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+          <button class="calc-btn" id="1"><i class="fa-solid fa-1"></i></button>
+          <button class="calc-btn" id="2"><i class="fa-solid fa-2"></i></button>
+          <button class="calc-btn" id="3"><i class="fa-solid fa-3"></i></button>
+          <button class="calc-btn" id="add">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <button class="calc-btn" id="0"><i class="fa-solid fa-0"></i></button>
+          <button class="calc-btn | period" id="period">
             <ion-icon name="ellipse"></ion-icon>
           </button>
-          <button class="calc-btn | equal">
+          <button class="calc-btn | equal" id="equal">
             <i class="fa-solid fa-equals"></i>
           </button>
         </div>
