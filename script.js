@@ -1,8 +1,10 @@
 const buttons = document.querySelectorAll(".calc-btn");
 const display = document.getElementById("display");
 const multiply = document.querySelector(".multiply");
+const operands = ["add", "subtract", "multiply", "divide", "equal"];
 let n1 = 0;
 let n2 = 0;
+let operand;
 
 const calcAdd = (n1, n2) => n1 + n2;
 const calcSubtract = (n1, n2) => n1 - n2;
@@ -32,14 +34,7 @@ const operate = (operand, n1, n2) => {
 // TODO: Incorporate auto-matic comma's in number formatting on display.value
 // toLocaleString() is not a string method .. this is currently typOf String
 
-/*  Need to take current.displayValue .. store it when operator is pressed
-    record what operator is pressed
-    clear current.displayValue
-    store 2nd displayValue and Operate()
-*/
-
 const handleClick = (e) => {
-  const operands = ["add", "subtract", "multiply", "divide", "equal"];
   let buttonValue = e.currentTarget.id;
 
   if (!operands.includes(e.target.id)) {
@@ -50,7 +45,18 @@ const handleClick = (e) => {
     }
   }
 
-  const operand = Array.from(e.target.classList);
+  switch (buttonValue) {
+    case "multiply":
+      n1 = parseInt(display.value);
+      display.value = "";
+      operand = "*";
+      break;
+  }
+
+  if (buttonValue === "equal") {
+    n2 = display.value;
+    display.value = operate(operand, n1, n2);
+  }
 
   // if (operand.includes("multiply")) {
   //   n1 = parseInt(display.value);
