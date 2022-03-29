@@ -54,14 +54,9 @@ const handleClick = (e) => {
   }
 
   if (buttonValue === "equal") {
-    n2 = display.value;
-    display.value = operate(operand, n1, n2);
+    n2 = parseInt(display.value);
+    console.log((display.value = operate(operand, n1, n2)));
   }
-
-  // if (operand.includes("multiply")) {
-  //   n1 = parseInt(display.value);
-  //   display.value = "";
-  // }
 };
 
 document.addEventListener("keydown", (e) => {
