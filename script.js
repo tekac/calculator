@@ -1,26 +1,29 @@
 const buttons = document.querySelectorAll(".calc-btn");
 const display = document.getElementById("display");
+const multiply = document.querySelector(".multiply");
+let n1 = 0;
+let n2 = 0;
 
-const add = (n1, n2) => n1 + n2;
-const subtract = (n1, n2) => n1 - n2;
-const multiply = (n1, n2) => n1 * n2;
-const divide = (n1, n2) => n1 / n2;
+const calcAdd = (n1, n2) => n1 + n2;
+const calcSubtract = (n1, n2) => n1 - n2;
+const calcMultiply = (n1, n2) => n1 * n2;
+const calcDivide = (n1, n2) => n1 / n2;
 
 const operate = (operand, n1, n2) => {
   let value = 0;
 
   switch (operand) {
     case "+":
-      value = add(n1, n2);
+      value = calcAdd(n1, n2);
       break;
     case "-":
-      value = subtract(n1, n2);
+      value = calcSubtract(n1, n2);
       break;
     case "*":
-      value = multiply(n1, n2);
+      value = calcMultiply(n1, n2);
       break;
     case "/":
-      value = divide(n1, n2);
+      value = calcDivide(n1, n2);
       break;
   }
   return value;
@@ -36,8 +39,23 @@ const operate = (operand, n1, n2) => {
 */
 
 const handleClick = (e) => {
+  const operands = ["add", "subtract", "multiply", "divide", "equal"];
   let buttonValue = e.currentTarget.id;
-  buttonValue === "C" ? (display.value = "") : (display.value += buttonValue);
+
+  if (!operands.includes(e.target.id)) {
+    if (buttonValue === "C") {
+      display.value = "";
+    } else {
+      display.value += buttonValue;
+    }
+  }
+
+  const operand = Array.from(e.target.classList);
+
+  // if (operand.includes("multiply")) {
+  //   n1 = parseInt(display.value);
+  //   display.value = "";
+  // }
 };
 
 document.addEventListener("keydown", (e) => {
