@@ -55,7 +55,7 @@ const handleClick = (e) => {
 
   if (buttonValue === "equal") {
     n2 = parseInt(display.value);
-    console.log((display.value = operate(operand, n1, n2)));
+    display.value = operate(operand, n1, n2);
   }
 };
 
