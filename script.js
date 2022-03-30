@@ -74,6 +74,7 @@ const handleClick = (e) => {
       break;
   }
 
+  // n2 is becoming 5 and persistently staying 5
   if (buttonValue === "equal") {
     n2 = parseInt(display.value);
     display.value = operate(operand, n1, n2);
